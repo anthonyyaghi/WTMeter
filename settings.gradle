@@ -1,0 +1,2 @@
+rootProject.name='WTMeter'
+include ':app'
