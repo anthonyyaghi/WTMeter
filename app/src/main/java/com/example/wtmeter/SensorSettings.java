@@ -1,12 +1,16 @@
 package com.example.wtmeter;
 
-public class SensorSettings {
+import java.io.Serializable;
+
+public class SensorSettings implements Serializable {
     private String ip;
     private long refreshRate;
+    private String name;
 
-    public SensorSettings(String ip, long refreshRate) {
+    public SensorSettings(String ip, long refreshRate, String name) {
         this.ip = ip;
         this.refreshRate = refreshRate;
+        this.name = name;
     }
 
     public String getIp() {
@@ -19,6 +23,14 @@ public class SensorSettings {
 
     public long getRefreshRate() {
         return refreshRate;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public void setRefreshRate(long refreshRate) {
